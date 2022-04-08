@@ -1,6 +1,5 @@
 const deadline = 'September 09 2023 12:30:00 GMT+0100'
 
-
 function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
@@ -28,9 +27,9 @@ function initializeClock(id, endtime) {
         const t = getTimeRemaining(endtime);
 
         daysSpan.innerHTML = t.days;
-        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        // hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
@@ -41,5 +40,4 @@ function initializeClock(id, endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
-
-initializeClock('clockdiv', deadline);
+initializeClock('countdown', deadline);
