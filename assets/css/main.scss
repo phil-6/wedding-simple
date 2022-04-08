@@ -11,14 +11,22 @@ $body-font: 'Josefin Sans', sans-serif;
 
 html {
   scroll-behavior: smooth;
+  height: 100%
 }
 
 body {
-  height: 90vh;
+  height: 100%;
+  margin: 0;
   font-family: $body-font;
+  background-color: #031112;
+  //background: linear-gradient(to bottom, #f5ff43, #50e176, #22d2df);
+
   h1 {
     font-family: $heading-font;
     font-size: 4rem;
+    background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   main {

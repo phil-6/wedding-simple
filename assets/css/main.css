@@ -1,15 +1,21 @@
 /* *** Variables *** */
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
-  height: 90vh;
+  height: 100%;
+  margin: 0;
   font-family: "Josefin Sans", sans-serif;
+  background-color: #031112;
 }
 body h1 {
   font-family: "Allura", cursive;
   font-size: 4rem;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 body main {
   height: 100%;
