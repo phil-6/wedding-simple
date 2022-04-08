@@ -1,0 +1,28 @@
+/* *** Variables *** */
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$heading-font: cursive;
+$body-font: sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: $body-font;
+
+  main {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+}

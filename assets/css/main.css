@@ -1,0 +1,17 @@
+/* *** Variables *** */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+body main {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
