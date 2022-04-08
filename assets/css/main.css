@@ -5,7 +5,11 @@ html {
 
 body {
   height: 90vh;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+body h1 {
+  font-family: "Allura", cursive;
+  font-size: 4rem;
 }
 body main {
   height: 100%;
