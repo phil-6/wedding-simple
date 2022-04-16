@@ -9,67 +9,105 @@ body {
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
   background-color: #031112;
+  color: whitesmoke;
 }
-body h1 {
+body h1, body h2 {
   font-family: "Allura", cursive;
-  font-size: 4rem;
   background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+body h1 {
+  font-size: 4rem;
 }
 @media (max-width: 576px) {
   body h1 {
     font-size: 2.5rem;
   }
 }
+body a {
+  text-decoration: none;
+}
 body .hidden {
   display: none !important;
 }
-body main {
+body .top {
+  margin-top: 1rem;
+  padding: 1.5rem;
+}
+body .top h2 {
+  text-align: center;
+  margin: 0;
+}
+body .top h2:first-child {
+  margin-bottom: -1rem;
+}
+body .bottom {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+body .bottom h2 {
+  text-align: center;
+  margin: 0;
+}
+body .bottom h2:first-child {
+  margin-bottom: -1rem;
+}
+body header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-body main #countdown h1 {
+body header #countdown h1 {
   margin: -1rem;
   text-align: center;
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
 }
-body main #countdown #countdown_days {
+body header #countdown #countdown_days {
   width: 20rem;
   margin: auto;
 }
-body main #countdown #countdown_all {
-  width: 400px;
+body header #countdown #countdown_all {
   display: flex;
   justify-content: space-evenly;
   background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 400px;
 }
 @media (max-width: 576px) {
-  body main #countdown #countdown_all {
+  body header #countdown #countdown_all {
     max-width: 400px;
     width: 100vw;
   }
 }
-body main #countdown #countdown_all h1 {
+body header #countdown #countdown_all h1 {
   font-family: "Josefin Sans", sans-serif;
   background: transparent;
   margin: 0 0.5rem -1rem;
 }
-body main #countdown #countdown_all .smalltext {
+body header #countdown #countdown_all .smalltext {
   font-family: "Allura", cursive;
   font-size: 2rem;
   text-align: center;
 }
 @media (max-width: 576px) {
-  body main #countdown #countdown_all .smalltext {
+  body header #countdown #countdown_all .smalltext {
     font-size: 1.5rem;
   }
+}
+body section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body section#details .middle {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
