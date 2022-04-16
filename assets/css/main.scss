@@ -140,6 +140,7 @@ body {
     justify-content: space-between;
     align-items: center;
     scroll-snap-align: center;
+
     h1 {
       font-size: 3rem;
     }
@@ -150,6 +151,7 @@ body {
       background: linear-gradient(to right, $yellow, $green 35%, $blue);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
       h2 {
         background: transparent;
         @media (max-width: $breakpoint-sm) {
@@ -166,19 +168,42 @@ body {
     &#details {
       .middle {
         text-align: center;
+
         .big {
           font-size: 3rem;
         }
       }
 
       .bottom {
+        @media (max-width: $breakpoint-sm) {
+          width: 100vw;
+        }
         width: 600px;
 
       }
     }
+
     &#order {
       ul {
+        width: 320px;
         list-style-type: none;
+        text-align: justify-all;
+
+        li {
+          //text-align:center;
+        }
+
+        .big {
+          margin-left: -75%;
+          width: 800px;
+          font-size: 2rem;
+          text-align: center;
+          @media (max-width: $breakpoint-sm) {
+            font-size: 1.6rem;
+            width: 100vw;
+            margin-left: -50px;
+          }
+        }
       }
     }
   }

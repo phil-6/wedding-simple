@@ -137,8 +137,28 @@ body section#details .middle .big {
 body section#details .bottom {
   width: 600px;
 }
+@media (max-width: 576px) {
+  body section#details .bottom {
+    width: 100vw;
+  }
+}
 body section#order ul {
+  width: 320px;
   list-style-type: none;
+  text-align: justify-all;
+}
+body section#order ul .big {
+  margin-left: -75%;
+  width: 800px;
+  font-size: 2rem;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  body section#order ul .big {
+    font-size: 1.6rem;
+    width: 100vw;
+    margin-left: -50px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
