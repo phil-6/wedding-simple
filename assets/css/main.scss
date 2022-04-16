@@ -17,7 +17,7 @@ $black: #031112;
 html {
   height: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
@@ -72,7 +72,7 @@ body {
   }
 
   .bottom {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 
 
     h2 {
@@ -203,8 +203,9 @@ body {
           text-align: center;
           @media (max-width: $breakpoint-sm) {
             font-size: 1.6rem;
-            width: 100vw;
-            margin-left: -50px;
+            width: 90vw;
+            margin-left: -25px;
+            overflow-x: clip;
           }
         }
       }

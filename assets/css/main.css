@@ -2,7 +2,7 @@
 html {
   height: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
@@ -46,7 +46,7 @@ body .top h2:first-child {
   margin-bottom: -1rem;
 }
 body .bottom {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 body .bottom h2 {
   text-align: center;
@@ -159,8 +159,9 @@ body section#order ul .big {
 @media (max-width: 576px) {
   body section#order ul .big {
     font-size: 1.6rem;
-    width: 100vw;
-    margin-left: -50px;
+    width: 90vw;
+    margin-left: -25px;
+    overflow-x: clip;
   }
 }
 
