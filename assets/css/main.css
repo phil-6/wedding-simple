@@ -17,12 +17,59 @@ body h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 576px) {
+  body h1 {
+    font-size: 2.5rem;
+  }
+}
+body .hidden {
+  display: none !important;
+}
 body main {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+body main #countdown h1 {
+  margin: -1rem;
+  text-align: center;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+body main #countdown #countdown_days {
+  width: 20rem;
+  margin: auto;
+}
+body main #countdown #countdown_all {
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 576px) {
+  body main #countdown #countdown_all {
+    max-width: 400px;
+    width: 100vw;
+  }
+}
+body main #countdown #countdown_all h1 {
+  font-family: "Josefin Sans", sans-serif;
+  background: transparent;
+  margin: 0 0.5rem -1rem;
+}
+body main #countdown #countdown_all .smalltext {
+  font-family: "Allura", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  body main #countdown #countdown_all .smalltext {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

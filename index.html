@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="theme-color" content="#1FCAD6">
+    <meta content="#1FCAD6" name="theme-color">
 
     <title>...</title>
     <!--    <meta name="description" content="Coming soon">-->
@@ -16,23 +16,36 @@
 
 <body>
 <main>
+    <h1>✧ Shona and Phil&nbsp;&nbsp;✧</h1>
     <div id="countdown">
-        <h1>
-            <span class="days"></span>
-            <span class="smalltext">days</span>
-        </h1>
-<!--        <div>-->
-<!--            <span class="hours"></span>-->
-<!--            <span class="smalltext">Hours</span>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <span class="minutes"></span>-->
-<!--            <span class="smalltext">Minutes</span>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <span class="seconds"></span>-->
-<!--            <span class="smalltext">Seconds</span>-->
-<!--        </div>-->
+        <div id="countdown_days" class="hidden">
+            <h1 class="days_container">
+                <span class="days"></span>
+                <span class="">days</span>
+            </h1>
+        </div>
+
+        <div id="countdown_all" class="hidden">
+            <div class="days_container">
+                <h1 class="days"></h1>
+                <div class="smalltext">days</div>
+            </div>
+
+            <div id="hours_container">
+                <h1 id="hours"></h1>
+                <div class="smalltext">hours</div>
+            </div>
+
+            <div id="minutes_container">
+                <h1 id="minutes"></h1>
+                <div class="smalltext">minutes</div>
+            </div>
+
+            <div id="seconds_container">
+                <h1 id="seconds"></h1>
+                <div class="smalltext">seconds</div>
+            </div>
+        </div>
     </div>
 </main>
 <script src="assets/js/countdown.js"></script>
