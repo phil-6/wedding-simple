@@ -15,15 +15,15 @@ function updateOrder() {
     const eight = order.querySelector('#eight')
 
     const time = (new Date())
-    const hours = time.getHours()
-    const minutes = time.getMinutes()
+    // const hours = time.getHours()
+    // const minutes = time.getMinutes()
 
     // for testing
     // const hours = time.getSeconds() / 2.5
     // const minutes = time.getMilliseconds() / 16
-    // const hours = 16
-    // const minutes = 10
-    // order.querySelector('#time_now').innerHTML = (hours + ':' + minutes + ':' + time.getSeconds() )
+    const hours = 19
+    const minutes = 50
+    order.querySelector('#time_now').innerHTML = (hours + ':' + minutes + ':' + time.getSeconds() )
 
     orderItems.forEach(item => {
         item.classList.remove('big');
@@ -32,31 +32,31 @@ function updateOrder() {
     if (hours > 9 && hours < 12){ //after 9 before 12
         arrive.classList.add('big')
     }
-    if ((hours >= 12 && hours < 13) || (hours === 13 && minutes < 20)){ //between 12 and 1320
+    if ((hours >= 12 && hours < 13) || (hours === 13 && minutes < 10)){ //between 12 and 1310
         start.classList.add('big')
     }
-    if ((hours >= 13 && minutes >= 20) && hours < 14){ //between 1320 and 14
+    if ((hours >= 13 && minutes >= 10) && (hours === 13 && minutes <= 30) ){ //between 1310 and 1330
         one.classList.add('big')
     }
-    if (hours >= 14 && (hours <= 14 && minutes < 30)){ //after 14 before 1430
+    if ((hours >= 13 && minutes > 30 && hours < 14) || (hours === 14 && minutes < 20)){ //after 1330 before 1420
         two.classList.add('big')
     }
-    if ((hours >= 14 && minutes >= 30) && hours < 16){ // after 1430 before 1600
+    if ((hours >= 14 && minutes >= 20 && hours < 15) || (hours === 15 && minutes < 50)){ // after 1420 before 1550
         three.classList.add('big')
     }
-    if (hours >= 16 && hours < 17){ //after 16 before 17
+    if ((hours >= 15 && minutes >= 50 && hours < 17) || hours === 16 || (hours === 17 && minutes < 20)){ //after 1550 before 1720
         four.classList.add('big')
     }
-    if (hours >= 17 && hours < 18){ //after 17 before 18
+    if (hours === 17 && minutes >= 20 && minutes < 50){ //after 1720 before 1750
         five.classList.add('big')
     }
-    if (hours >= 18 && hours < 19){ //after 18 before 19
+    if ((hours >= 17 && minutes >= 50 && hours < 18) || (hours === 18 && minutes < 50)){ //after 1750 before 1850
         six.classList.add('big')
     }
-    if (hours >= 19 && hours < 20){ //after 19 before 20
+    if ((hours >= 18 && minutes >= 50 && hours < 19) || (hours === 19 && minutes < 50)){ //after 1850 before 1950
         seven.classList.add('big')
     }
-    if (hours >= 20){ //after 20
+    if ((hours >= 19 && minutes >= 50) || hours >= 20){ //after 1950
         eight.classList.add('big')
     }
 
