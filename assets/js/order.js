@@ -15,15 +15,15 @@ function updateOrder() {
     const eight = order.querySelector('#eight')
 
     const time = (new Date())
-    // const hours = time.getHours()
-    // const minutes = time.getMinutes()
+    const hours = time.getHours()
+    const minutes = time.getMinutes()
 
     // for testing
     // const hours = time.getSeconds() / 2.5
     // const minutes = time.getMilliseconds() / 16
-    const hours = 19
-    const minutes = 50
-    order.querySelector('#time_now').innerHTML = (hours + ':' + minutes + ':' + time.getSeconds() )
+    // const hours = 19
+    // const minutes = 50
+    // order.querySelector('#time_now').innerHTML = (hours + ':' + minutes + ':' + time.getSeconds() )
 
     orderItems.forEach(item => {
         item.classList.remove('big');
