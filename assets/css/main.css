@@ -32,6 +32,38 @@ body h1 {
 body a {
   text-decoration: none;
 }
+body a.inline-link {
+  font-family: "Allura", cursive;
+  font-size: 1.4rem;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 6s ease-in-out infinite normal;
+  animation-delay: 2s;
+}
+@keyframes glow {
+  from {
+    text-shadow: none;
+  }
+  12.5% {
+    text-shadow: 0 0 10px #f5ff43;
+  }
+  25% {
+    text-shadow: none;
+  }
+  37.5% {
+    text-shadow: 0 0 10px #50e176;
+  }
+  50% {
+    text-shadow: none;
+  }
+  62.5% {
+    text-shadow: 0 0 10px #1FCAD6;
+  }
+  to {
+    text-shadow: none;
+  }
+}
 body .hidden {
   display: none !important;
 }
