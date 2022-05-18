@@ -35,6 +35,7 @@ body a {
 body a.inline-link {
   font-family: "Allura", cursive;
   font-size: 1.4rem;
+  line-height: 0.8rem;
   background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
