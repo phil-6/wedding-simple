@@ -142,7 +142,7 @@ body header #countdown #countdown_all .smalltext {
   }
 }
 body section {
-  height: 100vh;
+  height: 99%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
