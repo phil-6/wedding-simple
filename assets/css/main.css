@@ -78,6 +78,13 @@ body .top h2 {
 body .top h2:first-child {
   margin-bottom: -1rem;
 }
+body .middle {
+  max-width: 576px;
+  text-align: center;
+}
+body .middle img {
+  width: 100%;
+}
 body .bottom {
   margin-bottom: 3rem;
 }
