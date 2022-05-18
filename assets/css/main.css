@@ -142,13 +142,14 @@ body header #countdown #countdown_all .smalltext {
   }
 }
 body section {
-  height: 99%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   scroll-snap-align: center;
   scroll-padding: 50%;
+  margin: 10vh 0;
 }
 body section h1 {
   font-size: 3rem;
