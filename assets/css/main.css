@@ -82,6 +82,12 @@ body .middle {
   max-width: 576px;
   text-align: center;
 }
+body .middle h2 span {
+  margin: auto;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 body .middle img {
   width: 100%;
 }
@@ -177,14 +183,6 @@ body section#details .middle {
 }
 body section#details .middle .big {
   font-size: 3rem;
-}
-body section#details .bottom {
-  width: 600px;
-}
-@media (max-width: 576px) {
-  body section#details .bottom {
-    width: 100vw;
-  }
 }
 body section#order ul {
   width: 320px;

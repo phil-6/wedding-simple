@@ -90,6 +90,12 @@ body {
   .middle {
     max-width: $breakpoint-sm;
     text-align: center;
+    h2 span{
+      margin: auto;
+      background: linear-gradient(to right, $yellow, $green 35%, $blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     img {
       width: 100%;
     }
@@ -173,7 +179,7 @@ body {
       font-size: 3rem;
     }
 
-    .top, .bottom {
+    .top,.bottom {
       display: flex;
       justify-content: space-between;
       background: linear-gradient(to right, $yellow, $green 35%, $blue);
@@ -202,13 +208,13 @@ body {
         }
       }
 
-      .bottom {
-        @media (max-width: $breakpoint-sm) {
-          width: 100vw;
-        }
-        width: 600px;
-
-      }
+      //.bottom {
+      //  @media (max-width: $breakpoint-sm) {
+      //    width: 100vw;
+      //  }
+      //  width: 600px;
+      //
+      //}
     }
 
     &#order {
