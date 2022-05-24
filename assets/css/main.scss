@@ -142,7 +142,6 @@ body {
         background: linear-gradient(to right, $yellow, $green 35%, $blue);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        width: 400px;
         @media (max-width: $breakpoint-sm) {
           max-width: 400px;
           width: 100vw;

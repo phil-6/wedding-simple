@@ -125,7 +125,6 @@ body header #countdown #countdown_all {
   background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 400px;
 }
 @media (max-width: 576px) {
   body header #countdown #countdown_all {

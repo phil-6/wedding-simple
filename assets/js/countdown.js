@@ -41,12 +41,12 @@ function initializeClock(endtime) {
             clearInterval(timeinterval);
         }
 
-        if (t.days <= 100 || t.hours <= 2) {
+        if (t.days <= 100 || t.hours <= 1) {
             countdown_days.classList.add('hidden')
             countdown_all.classList.remove('hidden')
         }
 
-        if (t.hours > 2 && t.minutes <= 55) {
+        if (t.hours >= 2 && t.minutes <= 55) {
             countdown_days.classList.remove('hidden')
             countdown_all.classList.add('hidden')
         }
