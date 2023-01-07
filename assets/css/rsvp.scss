@@ -1,0 +1,44 @@
+
+/* *** Variables *** */
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$heading-font: 'Allura', cursive;
+$body-font: 'Josefin Sans', sans-serif;
+
+$yellow: #f5ff43;
+$green: #50e176;
+$blue: #1FCAD6;
+$black: #061224;
+$form-transparent: #1566e020;
+
+input{
+  background-color: $form-transparent;
+  border-radius: 2rem;
+  border: 0;
+  color: $blue;
+  font-size: 3rem;
+  max-width: 100%;
+  @media (max-width: $breakpoint-sm) {
+    font-size: 2rem;
+    max-width: 80%;
+  }
+
+  &:focus-visible{
+    box-shadow: 0 0 20px -5px $yellow;
+    outline: none;
+  }
+  &#password {
+    font-family: $heading-font;
+    margin-bottom: 15rem;
+    text-align: center;
+  }
+}
+
+.hidden {
+  display: none;
+}

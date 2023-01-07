@@ -41,7 +41,7 @@ body {
   h1 {
     font-size: 4rem;
     @media (max-width: $breakpoint-sm) {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
@@ -173,10 +173,6 @@ body {
     scroll-snap-align: center;
     scroll-padding: 50%;
     margin: 10vh 0;
-
-    h1 {
-      font-size: 3rem;
-    }
 
     .top,.bottom {
       display: flex;

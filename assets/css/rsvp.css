@@ -1,0 +1,30 @@
+/* *** Variables *** */
+input {
+  background-color: rgba(21, 102, 224, 0.1254901961);
+  border-radius: 2rem;
+  border: 0;
+  color: #1FCAD6;
+  font-size: 3rem;
+  max-width: 100%;
+}
+@media (max-width: 576px) {
+  input {
+    font-size: 2rem;
+    max-width: 80%;
+  }
+}
+input:focus-visible {
+  box-shadow: 0 0 20px -5px #f5ff43;
+  outline: none;
+}
+input#password {
+  font-family: "Allura", cursive;
+  margin-bottom: 15rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=rsvp.css.map */
