@@ -19,7 +19,7 @@ function enterPassword(event) {
     event.preventDefault();
     if (checkPassword()) {
         console.log("correct password")
-        passwordForm.hidden = true;
+        passwordForm.classList.add("hidden");
         rsvpForm.hidden = false;
         rsvpForm.classList.remove("hidden");
     }

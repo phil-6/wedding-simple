@@ -38,7 +38,7 @@
                 <label for="number" class="hidden">Contact Number</label>
                 <input type="text" name="number" id="number" placeholder="Contact Number" required>
 
-                <div>
+                <div class="form-section">
                     <label for="attending">Will you be attending?</label>
                     <select name="attending" id="attending" required>
                         <option disabled selected value> -- select an option --</option>
@@ -55,7 +55,7 @@
                 <input type="submit" class="submit" value="RSVP">
             </div>
 
-            <div id="attending_yes" class="form-section">
+            <div id="attending_yes" class="form-section hidden">
                 <div class="visible-label">
                     <label for="partySize">How many people are in your party?</label>
                     <input type="number" name="partySize" id="partySize" placeholder="2" value="2" min="1" max="6"
