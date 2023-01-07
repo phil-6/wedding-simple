@@ -9,26 +9,85 @@
     <meta content="Shona and Phil are getting married!" name="description">
     <meta content="Shona and Phil" name="author">
     <link href="assets/css/fonts.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <!--    <link href="assets/css/main.css" rel="stylesheet">-->
     <link href="assets/css/rsvp.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="rsvp">
 <section>
     <div class="top">
         <h1>✧ RSVP&nbsp;&nbsp;✧</h1>
     </div>
-    <div class="middle">
+    <div id="password_form" class="middle">
         <h1>Enter Your Password &nbsp;</h1>
-        <form>
+        <form name="passwordForm">
             <label for="password"></label>
             <input type="text" name="password" id="password" required>
         </form>
     </div>
-    <div class="middle" hidden>
-        test2
+
+    <div id="rsvp_form" class="middle hidden" hidden>
+        <form name="rsvpForm">
+            <div class="form-section">
+                <label for="name" class="hidden">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+                <label for="email" class="hidden">Contact Email</label>
+                <input type="text" name="email" id="email" placeholder="Contact Email" required>
+
+                <label for="number" class="hidden">Contact Number</label>
+                <input type="text" name="number" id="number" placeholder="Contact Number" required>
+
+                <div>
+                    <label for="attending">Will you be attending?</label>
+                    <select name="attending" id="attending" required>
+                        <option disabled selected value> -- select an option --</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="attending_no" class="form-section hidden">
+                <h2>We're sorry you can't make it.</h2>
+                <label for="reason">Do you want to let us know why?</label>
+                <textarea name="reason" id="reason"></textarea>
+                <input type="submit" class="submit" value="RSVP">
+            </div>
+
+            <div id="attending_yes" class="form-section">
+                <div class="visible-label">
+                    <label for="partySize">How many people are in your party?</label>
+                    <input type="number" name="partySize" id="partySize" placeholder="2" value="2" min="1" max="6"
+                           required>
+                </div>
+                <div id="party_details">
+
+                    <div id="person_input_template" class="hidden">
+                        <h2></h2>
+                        <label for="person_name" class="hidden">Name</label>
+                        <input type="text" name="person_name" id="person_name" placeholder="Name" required>
+
+                        <label for="person_dietary" class="hidden">Dietary Requirements</label>
+                        <input type="text" name="person_dietary" id="person_dietary"
+                               placeholder="Dietary Requirements">
+
+                        <label for="person_song" class="hidden">Song Request</label>
+                        <input type="text" name="person_song" id="person_song" placeholder="Song Request">
+
+                        <div class="visible-label">
+                            <label for="under_14">Under 12?</label>
+                            <input type="checkbox" name="under_12" id="under_14" value="false">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
     </div>
-    <div></div>
+
+    <div>&nbsp;</div>
 </section>
 
 <script src="assets/js/rsvp.js"></script>

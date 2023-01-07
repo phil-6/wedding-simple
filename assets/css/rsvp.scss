@@ -1,4 +1,3 @@
-
 /* *** Variables *** */
 $breakpoint-xs: 0;
 $breakpoint-sm: 576px;
@@ -9,6 +8,7 @@ $breakpoint-xxl: 1400px;
 
 $heading-font: 'Allura', cursive;
 $body-font: 'Josefin Sans', sans-serif;
+$form-font-size: 1.5rem;
 
 $yellow: #f5ff43;
 $green: #50e176;
@@ -16,29 +16,132 @@ $blue: #1FCAD6;
 $black: #061224;
 $form-transparent: #1566e020;
 
-input{
-  background-color: $form-transparent;
-  border-radius: 2rem;
-  border: 0;
-  color: $blue;
-  font-size: 3rem;
-  max-width: 100%;
-  @media (max-width: $breakpoint-sm) {
-    font-size: 2rem;
-    max-width: 80%;
-  }
+body#rsvp {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-family: $body-font;
+  background-color: $black;
+  color: whitesmoke;
 
-  &:focus-visible{
-    box-shadow: 0 0 20px -5px $yellow;
-    outline: none;
-  }
-  &#password {
+  h1, h2 {
     font-family: $heading-font;
-    margin-bottom: 15rem;
     text-align: center;
+    background: linear-gradient(to right, $yellow, $green 35%, $blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-}
 
-.hidden {
-  display: none;
+  h1 {
+    font-size: 3rem;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 2rem;
+    }
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  //.form-hidden {
+  //  visibility: hidden;
+  //  opacity: 0;
+  //  height: 0;
+  //  transition: all 1s;
+  //}
+  //.form-visible {
+  //  visibility: visible;
+  //  opacity: 1;
+  //  height: auto;
+  //  transition: all 1s;
+  //}
+
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-between;
+
+    #password_form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input {
+        font-family: $heading-font;
+        margin-bottom: 15rem;
+        font-size: 3rem;
+      }
+    }
+
+    input, select, textarea {
+      background-color: $form-transparent;
+      border: 0;
+      border-radius: 0.5rem;
+      color: $blue;
+      font-size: $form-font-size;
+      font-family: $body-font;
+      text-align: center;
+    }
+
+    input {
+      max-width: 100%;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+        max-width: 80%;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 20px -5px $yellow;
+        outline: none;
+        transition: all 0.5s;
+      }
+    }
+
+    #rsvp_form {
+      font-size: $form-font-size;
+
+      .form-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+      }
+
+      input {
+        &.submit {
+          font-family: $heading-font;
+          font-size: 2rem;
+          margin-top: 2rem;
+        }
+      }
+
+      select {
+      }
+
+      .visible-label {
+        display: flex;
+        gap: 1rem;
+
+        input[type=number] {
+          max-width: 5rem;
+        }
+      }
+
+      textarea {
+        height: 10rem;
+        resize: none;
+        text-align: left;
+      }
+
+      #party_details {
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+  }
 }

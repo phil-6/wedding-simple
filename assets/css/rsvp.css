@@ -1,30 +1,100 @@
 /* *** Variables *** */
-input {
-  background-color: rgba(21, 102, 224, 0.1254901961);
-  border-radius: 2rem;
-  border: 0;
-  color: #1FCAD6;
+body#rsvp {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #061224;
+  color: whitesmoke;
+}
+body#rsvp h1, body#rsvp h2 {
+  font-family: "Allura", cursive;
+  text-align: center;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body#rsvp h1 {
   font-size: 3rem;
+}
+@media (max-width: 576px) {
+  body#rsvp h1 {
+    font-size: 2rem;
+  }
+}
+body#rsvp .hidden {
+  display: none !important;
+}
+body#rsvp section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  justify-content: space-between;
+}
+body#rsvp section #password_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body#rsvp section #password_form input {
+  font-family: "Allura", cursive;
+  margin-bottom: 15rem;
+  font-size: 3rem;
+}
+body#rsvp section input, body#rsvp section select, body#rsvp section textarea {
+  background-color: rgba(21, 102, 224, 0.1254901961);
+  border: 0;
+  border-radius: 0.5rem;
+  color: #1FCAD6;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+body#rsvp section input {
   max-width: 100%;
 }
 @media (max-width: 576px) {
-  input {
+  body#rsvp section input {
     font-size: 2rem;
     max-width: 80%;
   }
 }
-input:focus-visible {
+body#rsvp section input:focus-visible {
   box-shadow: 0 0 20px -5px #f5ff43;
   outline: none;
+  transition: all 0.5s;
 }
-input#password {
+body#rsvp section #rsvp_form {
+  font-size: 1.5rem;
+}
+body#rsvp section #rsvp_form .form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+body#rsvp section #rsvp_form input.submit {
   font-family: "Allura", cursive;
-  margin-bottom: 15rem;
-  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
-
-.hidden {
-  display: none;
+body#rsvp section #rsvp_form .visible-label {
+  display: flex;
+  gap: 1rem;
+}
+body#rsvp section #rsvp_form .visible-label input[type=number] {
+  max-width: 5rem;
+}
+body#rsvp section #rsvp_form textarea {
+  height: 10rem;
+  resize: none;
+  text-align: left;
+}
+body#rsvp section #rsvp_form #party_details h2 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=rsvp.css.map */
