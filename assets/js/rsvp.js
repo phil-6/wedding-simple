@@ -4,6 +4,7 @@ const rsvpForm = document.rsvpForm;
 const successMessage = document.getElementById("rsvp_success");
 const submittingMessage = document.getElementById("rsvp_sending");
 
+const nameField = document.getElementById("name");
 const attendingSelect = document.getElementById("attending");
 const attendingYes = document.getElementById("attending_yes");
 const attendingNo = document.getElementById("attending_no");
@@ -11,6 +12,7 @@ const partySizeInput = document.getElementById("party_size");
 const partyDetailsSection = document.getElementById("party_details");
 const personInputTemplate = document.getElementById("person_input_template");
 
+nameField.addEventListener("change", setFirstPersonName);
 passwordForm.addEventListener("submit", enterPassword);
 rsvpForm.addEventListener("submit", submitForm);
 attendingSelect.addEventListener("change", attendingChange);
@@ -46,6 +48,7 @@ function attendingChange() {
         document.querySelector("#party_size").setAttribute("required", "required");
         document.querySelector("#camping").setAttribute("required", "required");
         createPersonInputs();
+        setFirstPersonName();
     } else {
         attendingNo.classList.remove("hidden");
         attendingYes.classList.add("hidden");
@@ -73,6 +76,14 @@ function partySizeChange() {
         for (let i = currentInputs.length; i < partySize; i++) {
             addPersonInput(i);
         }
+    }
+}
+
+function setFirstPersonName() {
+    try {
+        document.getElementsByName("person_name_0")[0].value = nameField.value
+    } catch (e) {
+        // console.log(e)
     }
 }
 
