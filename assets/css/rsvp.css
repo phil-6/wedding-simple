@@ -22,6 +22,9 @@ body#rsvp h1 {
     font-size: 2rem;
   }
 }
+body#rsvp a {
+  text-decoration: none;
+}
 body#rsvp .hidden {
   display: none !important;
 }

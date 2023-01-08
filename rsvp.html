@@ -16,6 +16,9 @@
 <body id="rsvp">
 <section>
     <div class="top">
+        <a href="/">
+            <h2>&#8249; Home</h2>
+        </a>
         <h1>✧ RSVP&nbsp;&nbsp;✧</h1>
     </div>
     <div id="password_form" class="middle">
@@ -56,6 +59,15 @@
             </div>
 
             <div id="attending_yes" class="form-section hidden">
+                <div class="form-section">
+                    <label for="camping">Will you be camping at Rhyse Farm?</label>
+                    <select name="camping" id="camping" required>
+                        <option disabled selected value> -- select an option --</option>
+                        <option value="van">Van</option>
+                        <option value="tent">Tent</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
                 <div class="visible-label">
                     <label for="partySize">How many people are in your party?</label>
                     <input type="number" name="partySize" id="partySize" placeholder="2" value="2" min="1" max="6"
