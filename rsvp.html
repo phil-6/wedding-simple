@@ -74,8 +74,14 @@
                 </div>
                 <div class="visible-label">
                     <label for="party_size">How many people are in your party?</label>
-                    <input type="number" name="party_size" id="party_size" placeholder="2" value="2" min="1" max="6"
-                           required>
+                    <select name="party_size" id="party_size" required>
+                        <option value="1">1</option>
+                        <option selected value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
                 </div>
                 <div id="party_details">
                     <div id="person_input_template" class="hidden">

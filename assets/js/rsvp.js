@@ -55,10 +55,13 @@ function attendingChange() {
     }
 }
 
-
 function partySizeChange() {
     // find number of inputs and add/remove as needed
     let partySize = partySizeInput.value;
+    if (partySize > 6) {
+        partySize = 6;
+        partySizeInput.value = 6;
+    }
     let currentInputs = document.querySelectorAll(".person-input");
     if (currentInputs.length > partySize) {
         // remove inputs
