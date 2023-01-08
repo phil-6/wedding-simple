@@ -70,6 +70,14 @@ body#rsvp section input:focus-visible {
   outline: none;
   transition: all 0.5s;
 }
+body#rsvp section input.submit {
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+body#rsvp section input.submit:hover {
+  box-shadow: -20px 0 30px #f5ff43, 0 0 30px #50e176, 20px 0 30px #1FCAD6;
+  transition: all 0.5s;
+}
 body#rsvp section #rsvp_form_container {
   font-size: 1.5rem;
 }
