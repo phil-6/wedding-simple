@@ -30,7 +30,9 @@
     </div>
 
     <div id="rsvp_form" class="middle hidden" hidden>
-        <form name="rsvpForm">
+        <form name="rsvpForm"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbzEC_Ksd9nEVXwnbXsW9XNKydplZQst9U4HwGt44rMyp6MelrsZcli44lkYhrU2nm9b/exec">
             <div class="form-section">
                 <label for="name" class="hidden">Your Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
@@ -93,6 +95,7 @@
                     </div>
 
                 </div>
+                <button type="submit">RSVP</button>
             </div>
 
         </form>
@@ -103,5 +106,4 @@
 
 <script src="assets/js/rsvp.js"></script>
 </body>
-
 </html>
