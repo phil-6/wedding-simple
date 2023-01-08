@@ -76,10 +76,20 @@ body#rsvp {
     }
 
     #password_form {
+      margin-bottom: 10rem;
+
+      h1 {
+        margin: 0 0 2rem 0;
+      }
+
       input {
         font-family: $heading-font;
-        margin-bottom: 15rem;
+        margin-bottom: 2rem;
         font-size: 3rem;
+
+        &.submit {
+          font-size: 2rem;
+        }
       }
     }
 
@@ -108,7 +118,7 @@ body#rsvp {
 
       &.submit {
         cursor: pointer;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
 
         &:hover {
           box-shadow: -20px 0 30px $yellow,

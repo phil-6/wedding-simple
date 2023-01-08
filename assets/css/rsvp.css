@@ -42,10 +42,19 @@ body#rsvp section form {
   flex-direction: column;
   align-items: center;
 }
+body#rsvp section #password_form {
+  margin-bottom: 10rem;
+}
+body#rsvp section #password_form h1 {
+  margin: 0 0 2rem 0;
+}
 body#rsvp section #password_form input {
   font-family: "Allura", cursive;
-  margin-bottom: 15rem;
+  margin-bottom: 2rem;
   font-size: 3rem;
+}
+body#rsvp section #password_form input.submit {
+  font-size: 2rem;
 }
 body#rsvp section input, body#rsvp section select, body#rsvp section textarea {
   background-color: rgba(21, 102, 224, 0.1254901961);
@@ -72,7 +81,7 @@ body#rsvp section input:focus-visible {
 }
 body#rsvp section input.submit {
   cursor: pointer;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 }
 body#rsvp section input.submit:hover {
   box-shadow: -20px 0 30px #f5ff43, 0 0 30px #50e176, 20px 0 30px #1FCAD6;
