@@ -31,7 +31,7 @@
 
     <div id="rsvp_form" class="middle hidden" hidden>
         <form name="rsvpForm"
-              method="POST"
+              method="post"
               action="https://script.google.com/macros/s/AKfycbzEC_Ksd9nEVXwnbXsW9XNKydplZQst9U4HwGt44rMyp6MelrsZcli44lkYhrU2nm9b/exec">
             <div class="form-section">
                 <label for="name" class="hidden">Your Name</label>
@@ -71,15 +71,15 @@
                     </select>
                 </div>
                 <div class="visible-label">
-                    <label for="partySize">How many people are in your party?</label>
-                    <input type="number" name="partySize" id="partySize" placeholder="2" value="2" min="1" max="6"
+                    <label for="party_size">How many people are in your party?</label>
+                    <input type="number" name="party_size" id="party_size" placeholder="2" value="2" min="1" max="6"
                            required>
                 </div>
                 <div id="party_details">
                     <div id="person_input_template" class="hidden">
                         <h2></h2>
                         <label for="person_name" class="hidden">Name</label>
-                        <input type="text" name="person_name" id="person_name" placeholder="Name" required>
+                        <input type="text" name="person_name" id="person_name" placeholder="Name">
 
                         <label for="person_dietary" class="hidden">Dietary Requirements</label>
                         <input type="text" name="person_dietary" id="person_dietary"
@@ -95,7 +95,7 @@
                     </div>
 
                 </div>
-                <button type="submit">RSVP</button>
+                <input type="submit" value="Submit" />
             </div>
 
         </form>

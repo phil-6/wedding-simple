@@ -1,5 +1,5 @@
 const passwordForm = document.getElementById("password_form");
-const rsvpForm = document.getElementById("rsvp_form");
+const rsvpFormContainer = document.getElementById("rsvp_form");
 passwordForm.addEventListener("submit", enterPassword);
 
 function checkPassword() {
@@ -8,7 +8,7 @@ function checkPassword() {
     // It's mostly for show and to prevent bots anyway!
     const password = "password";
     if (password !== submittedPassword.value) {
-            alert("Password is incorrect, please check your invite!");
+        alert("Password is incorrect, please check your invite!");
         submittedPassword.value = "";
         return false;
     }
@@ -20,8 +20,8 @@ function enterPassword(event) {
     if (checkPassword()) {
         console.log("correct password")
         passwordForm.classList.add("hidden");
-        rsvpForm.hidden = false;
-        rsvpForm.classList.remove("hidden");
+        rsvpFormContainer.hidden = false;
+        rsvpFormContainer.classList.remove("hidden");
     }
 }
 
@@ -41,7 +41,7 @@ function attendingChange() {
     }
 }
 
-const partySizeInput = document.getElementById("partySize");
+const partySizeInput = document.getElementById("party_size");
 partySizeInput.addEventListener("change", partySizeChange);
 const partyDetailsSection = document.getElementById("party_details");
 
@@ -63,6 +63,7 @@ function partySizeChange() {
 }
 
 const personInputTemplate = document.getElementById("person_input_template");
+
 function createPersonInputs() {
     let partySize = partySizeInput.value;
     console.log(partySize);
@@ -71,15 +72,32 @@ function createPersonInputs() {
     }
 }
 
-function addPersonInput(number){
+function addPersonInput(number) {
     let thisPerson = personInputTemplate.cloneNode(true);
-    thisPerson.id="person_" + number;
+    thisPerson.id = "person_" + number;
     thisPerson.classList.remove("hidden");
-    thisPerson.classList.add("person-input","form-section");
+    thisPerson.classList.add("person-input", "form-section");
     thisPerson.querySelector("h2").innerText = "Person " + (number + 1);
     thisPerson.querySelector("#person_name").name = "person_name_" + number;
     thisPerson.querySelector("#person_dietary").name = "person_dietary_" + number;
     thisPerson.querySelector("#person_song").name = "person_song_" + number;
     thisPerson.querySelector("#person_under_12").name = "person_under_12_" + number;
     partyDetailsSection.appendChild(thisPerson);
+}
+
+const rsvpForm = document.rsvpForm;
+rsvpForm.addEventListener("submit", submitForm);
+
+function submitForm(event) {
+    event.preventDefault();
+    console.log("submitting form");
+    const formData = new FormData(rsvpForm)
+    console.log(formData);
+    const action = event.target.action;
+    fetch(action, {
+        method: 'POST',
+        body: formData,
+    }).then(() => {
+        alert("Success!");
+    })
 }
