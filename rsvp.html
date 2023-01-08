@@ -41,7 +41,9 @@
                 <input type="email" name="email" id="email" placeholder="Contact Email" required>
 
                 <label for="number" class="hidden">Contact Number</label>
-                <input type="text" name="number" id="number" placeholder="Contact Number" required>
+                <input type="text" name="number" id="number"
+                       minlength="10" maxlength="14" pattern="[0-9]{10,14}"
+                       placeholder="Contact Number" required>
 
                 <div class="form-section">
                     <label for="attending">Will you be attending?</label>
@@ -93,11 +95,9 @@
                             <input type="checkbox" name="under_12" id="person_under_12" value="false">
                         </div>
                     </div>
-
                 </div>
-                <input type="submit" class="submit" value="RSVP" />
+                <input type="submit" class="submit" value="RSVP"/>
             </div>
-
         </form>
     </div>
 
