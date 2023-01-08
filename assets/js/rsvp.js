@@ -77,5 +77,9 @@ function addPersonInput(number){
     thisPerson.classList.remove("hidden");
     thisPerson.classList.add("person-input","form-section");
     thisPerson.querySelector("h2").innerText = "Person " + (number + 1);
+    thisPerson.querySelector("#person_name").name = "person_name_" + number;
+    thisPerson.querySelector("#person_dietary").name = "person_dietary_" + number;
+    thisPerson.querySelector("#person_song").name = "person_song_" + number;
+    thisPerson.querySelector("#person_under_12").name = "person_under_12_" + number;
     partyDetailsSection.appendChild(thisPerson);
 }
