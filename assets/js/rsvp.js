@@ -34,10 +34,15 @@ function attendingChange() {
     if (attendingSelect.value === "yes") {
         attendingYes.classList.remove("hidden");
         attendingNo.classList.add("hidden");
+        document.querySelector("#party_size").setAttribute("required", "required");
+        document.querySelector("#camping").setAttribute("required", "required");
         createPersonInputs();
     } else {
         attendingNo.classList.remove("hidden");
         attendingYes.classList.add("hidden");
+        document.querySelector("#party_size").removeAttribute("required");
+        document.querySelector("#camping").removeAttribute("required");
+        removePersonInputs();
     }
 }
 
@@ -72,6 +77,13 @@ function createPersonInputs() {
     }
 }
 
+function removePersonInputs() {
+    let currentInputs = document.querySelectorAll(".person-input");
+    for (const input of currentInputs) {
+        input.remove();
+    }
+}
+
 function addPersonInput(number) {
     let thisPerson = personInputTemplate.cloneNode(true);
     thisPerson.id = "person_" + number;
@@ -79,6 +91,7 @@ function addPersonInput(number) {
     thisPerson.classList.add("person-input", "form-section");
     thisPerson.querySelector("h2").innerText = "Person " + (number + 1);
     thisPerson.querySelector("#person_name").name = "person_name_" + number;
+    thisPerson.querySelector("#person_name").setAttribute("required", "required");
     thisPerson.querySelector("#person_dietary").name = "person_dietary_" + number;
     thisPerson.querySelector("#person_song").name = "person_song_" + number;
     thisPerson.querySelector("#person_under_12").name = "person_under_12_" + number;
