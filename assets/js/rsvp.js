@@ -1,6 +1,20 @@
 const passwordForm = document.getElementById("password_form");
-const rsvpFormContainer = document.getElementById("rsvp_form");
+const rsvpFormContainer = document.getElementById("rsvp_form_container");
+const rsvpForm = document.rsvpForm;
+const successMessage = document.getElementById("rsvp_success");
+const submittingMessage = document.getElementById("rsvp_sending");
+
+const attendingSelect = document.getElementById("attending");
+const attendingYes = document.getElementById("attending_yes");
+const attendingNo = document.getElementById("attending_no");
+const partySizeInput = document.getElementById("party_size");
+const partyDetailsSection = document.getElementById("party_details");
+const personInputTemplate = document.getElementById("person_input_template");
+
 passwordForm.addEventListener("submit", enterPassword);
+rsvpForm.addEventListener("submit", submitForm);
+attendingSelect.addEventListener("change", attendingChange);
+partySizeInput.addEventListener("change", partySizeChange);
 
 function checkPassword() {
     let submittedPassword = document.getElementById("password");
@@ -25,11 +39,6 @@ function enterPassword(event) {
     }
 }
 
-const attendingSelect = document.getElementById("attending");
-attendingSelect.addEventListener("change", attendingChange);
-const attendingYes = document.getElementById("attending_yes");
-const attendingNo = document.getElementById("attending_no");
-
 function attendingChange() {
     if (attendingSelect.value === "yes") {
         attendingYes.classList.remove("hidden");
@@ -46,9 +55,6 @@ function attendingChange() {
     }
 }
 
-const partySizeInput = document.getElementById("party_size");
-partySizeInput.addEventListener("change", partySizeChange);
-const partyDetailsSection = document.getElementById("party_details");
 
 function partySizeChange() {
     // find number of inputs and add/remove as needed
@@ -66,8 +72,6 @@ function partySizeChange() {
         }
     }
 }
-
-const personInputTemplate = document.getElementById("person_input_template");
 
 function createPersonInputs() {
     let partySize = partySizeInput.value;
@@ -98,19 +102,30 @@ function addPersonInput(number) {
     partyDetailsSection.appendChild(thisPerson);
 }
 
-const rsvpForm = document.rsvpForm;
-rsvpForm.addEventListener("submit", submitForm);
-
 function submitForm(event) {
     event.preventDefault();
     console.log("submitting form");
     const formData = new FormData(rsvpForm)
     console.log(formData);
+    rsvpFormContainer.classList.add("hidden");
+    submittingMessage.classList.remove("hidden");
     const action = event.target.action;
     fetch(action, {
         method: 'POST',
         body: formData,
     }).then(() => {
-        alert("Success!");
+        submittingMessage.classList.add("hidden");
+        successMessage.classList.remove("hidden");
+        localStorage.setItem("rsvp_success", "true");
     })
 }
+
+function checkForPreviousSubmission() {
+    if (localStorage.getItem("rsvp_success") === "true") {
+        passwordForm.classList.add("hidden");
+        rsvpFormContainer.remove();
+        successMessage.classList.remove("hidden");
+    }
+}
+
+checkForPreviousSubmission();

@@ -70,10 +70,10 @@ body#rsvp section input:focus-visible {
   outline: none;
   transition: all 0.5s;
 }
-body#rsvp section #rsvp_form {
+body#rsvp section #rsvp_form_container {
   font-size: 1.5rem;
 }
-body#rsvp section #rsvp_form .form-section {
+body#rsvp section #rsvp_form_container .form-section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -81,24 +81,24 @@ body#rsvp section #rsvp_form .form-section {
   padding-bottom: 1rem;
   width: 100%;
 }
-body#rsvp section #rsvp_form input.submit {
+body#rsvp section #rsvp_form_container input.submit {
   font-family: "Allura", cursive;
   font-size: 2rem;
   margin-top: 2rem;
 }
-body#rsvp section #rsvp_form .visible-label {
+body#rsvp section #rsvp_form_container .visible-label {
   display: flex;
   gap: 1rem;
 }
-body#rsvp section #rsvp_form .visible-label input[type=number] {
+body#rsvp section #rsvp_form_container .visible-label input[type=number] {
   max-width: 5rem;
 }
-body#rsvp section #rsvp_form textarea {
+body#rsvp section #rsvp_form_container textarea {
   height: 10rem;
   resize: none;
   text-align: left;
 }
-body#rsvp section #rsvp_form #party_details h2 {
+body#rsvp section #rsvp_form_container #party_details h2 {
   margin: 0;
 }
 
