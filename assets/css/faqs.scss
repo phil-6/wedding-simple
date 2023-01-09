@@ -28,6 +28,10 @@ body#faqs {
   text-align: center;
   width: 100%;
 
+  a {
+    text-decoration: none;
+  }
+
   .logo-container {
     width: 100%;
     display: flex;

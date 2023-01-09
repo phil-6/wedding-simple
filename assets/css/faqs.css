@@ -13,6 +13,9 @@ body#faqs {
   text-align: center;
   width: 100%;
 }
+body#faqs a {
+  text-decoration: none;
+}
 body#faqs .logo-container {
   width: 100%;
   display: flex;
