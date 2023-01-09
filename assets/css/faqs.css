@@ -1,0 +1,53 @@
+/* *** Variables *** */
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body#faqs {
+  background-color: #061224;
+  color: whitesmoke;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+body#faqs.simple-font h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+body#faqs #fontButton {
+  cursor: pointer;
+}
+body#faqs h1, body#faqs h2 {
+  font-family: "Allura", cursive;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body#faqs h1 {
+  font-size: 3rem;
+}
+@media (max-width: 576px) {
+  body#faqs h1 {
+    font-size: 2rem;
+  }
+}
+body#faqs section {
+  margin: 1rem auto;
+}
+body#faqs section .question {
+  max-width: 40rem;
+  margin: auto;
+}
+@media (max-width: 576px) {
+  body#faqs section .question p {
+    width: 90%;
+    margin: auto;
+  }
+  body#faqs section .question h2 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=faqs.css.map */

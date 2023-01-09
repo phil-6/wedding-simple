@@ -1,0 +1,72 @@
+/* *** Variables *** */
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$heading-font: 'Allura', cursive;
+$body-font: 'Josefin Sans', sans-serif;
+
+$yellow: #f5ff43;
+$green: #50e176;
+$blue: #1FCAD6;
+$black: #061224;
+
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body#faqs {
+  background-color: $black;
+  color: whitesmoke;
+  font-family: $body-font;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+
+  &.simple-font {
+    h2 {
+      font-family: $body-font;
+    }
+  }
+
+  #fontButton {
+    cursor: pointer;
+  }
+
+  h1, h2 {
+    font-family: $heading-font;
+    background: linear-gradient(to right, $yellow, $green 35%, $blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h1 {
+    font-size: 3rem;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 2rem;
+    }
+  }
+
+  section {
+    margin: 1rem auto;
+
+    .question {
+      max-width: 40rem;
+      margin: auto;
+      @media (max-width: $breakpoint-sm) {
+        p {
+          width: 90%;
+          margin: auto;
+        }
+        h2 {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
