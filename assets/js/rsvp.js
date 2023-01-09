@@ -34,7 +34,7 @@ function checkPassword() {
 function enterPassword(event) {
     event.preventDefault();
     if (checkPassword()) {
-        console.log("correct password")
+        // console.log("correct password")
         passwordForm.classList.add("hidden");
         rsvpFormContainer.hidden = false;
         rsvpFormContainer.classList.remove("hidden");
@@ -89,7 +89,7 @@ function setFirstPersonName() {
 
 function createPersonInputs() {
     let partySize = partySizeInput.value;
-    console.log(partySize);
+    // console.log(partySize);
     for (let i = 0; i < partySize; i++) {
         addPersonInput(i);
     }
@@ -118,9 +118,9 @@ function addPersonInput(number) {
 
 function submitForm(event) {
     event.preventDefault();
-    console.log("submitting form");
+    // console.log("submitting form");
     const formData = new FormData(rsvpForm)
-    console.log(formData);
+    // console.log(formData);
     rsvpFormContainer.classList.add("hidden");
     submittingMessage.classList.remove("hidden");
     const action = event.target.action;
