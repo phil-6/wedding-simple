@@ -54,6 +54,14 @@ body#rsvp {
   section {
     width: 100%;
 
+    .top h2 {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      margin: auto;
+      max-width: 30rem;
+    }
+
     form {
       width: 100vw;
       display: flex;
@@ -88,9 +96,9 @@ body#rsvp {
       &.submit {
         cursor: pointer;
         padding: 0 1rem;
+        width: auto;
 
         @media (max-width: $breakpoint-sm) {
-          width: auto;
           box-shadow: -20px 0 30px $yellow,
           0 0 30px $green,
           20px 0 30px $blue;

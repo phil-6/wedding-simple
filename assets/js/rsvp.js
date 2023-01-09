@@ -107,7 +107,7 @@ function addPersonInput(number) {
     thisPerson.id = "person_" + number;
     thisPerson.classList.remove("hidden");
     thisPerson.classList.add("person-input", "form-section");
-    thisPerson.querySelector("h2").innerText = "Person " + (number + 1);
+    thisPerson.querySelector("h2").innerText = "Person " + (number + 1) + "\xa0";
     thisPerson.querySelector("#person_name").name = "person_name_" + number;
     thisPerson.querySelector("#person_name").setAttribute("required", "required");
     thisPerson.querySelector("#person_dietary").name = "person_dietary_" + number;
