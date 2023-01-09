@@ -58,13 +58,27 @@ body {
       animation: glow 6s ease-in-out infinite normal;
       animation-delay: 2s;
       @keyframes glow {
-        from {text-shadow: none;}
-        12.5% {text-shadow: 0 0 10px $yellow;}
-        25% {text-shadow: none;}
-        37.5% {text-shadow: 0 0 10px $green; }
-        50% {text-shadow: none;}
-        62.5% {text-shadow: 0 0 10px $blue;}
-        to {text-shadow: none;}
+        from {
+          text-shadow: none;
+        }
+        12.5% {
+          text-shadow: 0 0 10px $yellow;
+        }
+        25% {
+          text-shadow: none;
+        }
+        37.5% {
+          text-shadow: 0 0 10px $green;
+        }
+        50% {
+          text-shadow: none;
+        }
+        62.5% {
+          text-shadow: 0 0 10px $blue;
+        }
+        to {
+          text-shadow: none;
+        }
       }
     }
   }
@@ -75,7 +89,6 @@ body {
 
   .top {
     margin-top: 0.5rem;
-
 
     h2 {
       text-align: center;
@@ -90,12 +103,18 @@ body {
   .middle {
     max-width: $breakpoint-sm;
     text-align: center;
-    h2 span{
+
+    &.logo {
+      max-width: $breakpoint-xxl;
+    }
+
+    h2 span {
       margin: auto;
       background: linear-gradient(to right, $yellow, $green 35%, $blue);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     img {
       width: 100%;
     }
@@ -103,7 +122,6 @@ body {
 
   .bottom {
     margin-bottom: 3rem;
-
 
     h2 {
       text-align: center;
@@ -115,14 +133,41 @@ body {
     }
   }
 
-  header {
-    height: 100%;
+
+  header,section {
+    align-items: center;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     scroll-snap-align: center;
-    text-align: center;
+    scroll-padding: 50%;
+    margin: 10vh 0;
+    img.logo {
+      max-width: 100%;
+      max-height: 100%;
+      aspect-ratio: auto;
+    }
+
+    .top, .bottom {
+      display: flex;
+      justify-content: space-between;
+      background: linear-gradient(to right, $yellow, $green 35%, $blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      h2 {
+        background: transparent;
+        @media (max-width: $breakpoint-sm) {
+          font-size: 1.2rem;
+        }
+      }
+
+      a {
+        margin: 0.5rem;
+      }
+
+    }
 
     #countdown {
       h1 {
@@ -161,37 +206,6 @@ body {
           }
         }
       }
-    }
-  }
-
-  section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    scroll-snap-align: center;
-    scroll-padding: 50%;
-    margin: 10vh 0;
-
-    .top,.bottom {
-      display: flex;
-      justify-content: space-between;
-      background: linear-gradient(to right, $yellow, $green 35%, $blue);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      h2 {
-        background: transparent;
-        @media (max-width: $breakpoint-sm) {
-          font-size: 1.2rem;
-        }
-      }
-
-      a {
-        margin: 0.5rem;
-      }
-
     }
 
     &#details {

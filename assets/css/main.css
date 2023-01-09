@@ -82,6 +82,9 @@ body .middle {
   max-width: 576px;
   text-align: center;
 }
+body .middle.logo {
+  max-width: 1400px;
+}
 body .middle h2 span {
   margin: auto;
   background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
@@ -101,25 +104,49 @@ body .bottom h2 {
 body .bottom h2:first-child {
   margin-bottom: -1rem;
 }
-body header {
-  height: 100%;
+body header, body section {
+  align-items: center;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   scroll-snap-align: center;
-  text-align: center;
+  scroll-padding: 50%;
+  margin: 10vh 0;
 }
-body header #countdown h1 {
+body header img.logo, body section img.logo {
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: auto;
+}
+body header .top, body header .bottom, body section .top, body section .bottom {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body header .top h2, body header .bottom h2, body section .top h2, body section .bottom h2 {
+  background: transparent;
+}
+@media (max-width: 576px) {
+  body header .top h2, body header .bottom h2, body section .top h2, body section .bottom h2 {
+    font-size: 1.2rem;
+  }
+}
+body header .top a, body header .bottom a, body section .top a, body section .bottom a {
+  margin: 0.5rem;
+}
+body header #countdown h1, body section #countdown h1 {
   margin: -1rem;
   font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
 }
-body header #countdown #countdown_days {
+body header #countdown #countdown_days, body section #countdown #countdown_days {
   width: 20rem;
   margin: auto;
 }
-body header #countdown #countdown_all {
+body header #countdown #countdown_all, body section #countdown #countdown_all {
   display: flex;
   justify-content: space-evenly;
   background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
@@ -127,72 +154,44 @@ body header #countdown #countdown_all {
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 576px) {
-  body header #countdown #countdown_all {
+  body header #countdown #countdown_all, body section #countdown #countdown_all {
     max-width: 400px;
     width: 100vw;
   }
 }
-body header #countdown #countdown_all h1 {
+body header #countdown #countdown_all h1, body section #countdown #countdown_all h1 {
   font-family: "Josefin Sans", sans-serif;
   background: transparent;
   margin: 0 0.5rem -1rem;
 }
-body header #countdown #countdown_all .smalltext {
+body header #countdown #countdown_all .smalltext, body section #countdown #countdown_all .smalltext {
   font-family: "Allura", cursive;
   font-size: 2rem;
 }
 @media (max-width: 576px) {
-  body header #countdown #countdown_all .smalltext {
+  body header #countdown #countdown_all .smalltext, body section #countdown #countdown_all .smalltext {
     font-size: 1.5rem;
   }
 }
-body section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  scroll-snap-align: center;
-  scroll-padding: 50%;
-  margin: 10vh 0;
-}
-body section .top, body section .bottom {
-  display: flex;
-  justify-content: space-between;
-  background: linear-gradient(to right, #f5ff43, #50e176 35%, #1FCAD6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-body section .top h2, body section .bottom h2 {
-  background: transparent;
-}
-@media (max-width: 576px) {
-  body section .top h2, body section .bottom h2 {
-    font-size: 1.2rem;
-  }
-}
-body section .top a, body section .bottom a {
-  margin: 0.5rem;
-}
-body section#details .middle {
+body header#details .middle, body section#details .middle {
   text-align: center;
 }
-body section#details .middle .big {
+body header#details .middle .big, body section#details .middle .big {
   font-size: 3rem;
 }
-body section#order ul {
+body header#order ul, body section#order ul {
   width: 320px;
   list-style-type: none;
   text-align: justify-all;
 }
-body section#order ul .big {
+body header#order ul .big, body section#order ul .big {
   margin-left: -75%;
   width: 800px;
   font-size: 2rem;
   text-align: center;
 }
 @media (max-width: 576px) {
-  body section#order ul .big {
+  body header#order ul .big, body section#order ul .big {
     font-size: 1.6rem;
     width: 90vw;
     margin-left: -25px;
