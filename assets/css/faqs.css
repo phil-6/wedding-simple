@@ -20,7 +20,7 @@ body#faqs .logo-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 body#faqs .logo-container img.logo {
   aspect-ratio: auto;

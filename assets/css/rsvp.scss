@@ -21,7 +21,7 @@ html {
 }
 
 body#rsvp {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   margin: 0;
   font-family: $body-font;
@@ -38,7 +38,7 @@ body#rsvp {
 
   h1 {
     font-size: 3rem;
-    margin: 1rem;
+    margin: 1rem auto;
     @media (max-width: $breakpoint-sm) {
       font-size: 2rem;
     }
@@ -53,13 +53,11 @@ body#rsvp {
   }
 
   section {
-    width: 100%;
-
     .logo-container {
       width: 100%;
       display: flex;
       justify-content: center;
-      margin: 1rem;
+      margin: 1rem auto;
 
       img.logo {
         aspect-ratio: auto;
@@ -76,7 +74,7 @@ body#rsvp {
     }
 
     form {
-      width: 100vw;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;

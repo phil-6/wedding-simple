@@ -4,7 +4,7 @@ html {
 }
 
 body#rsvp {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   margin: 0;
   font-family: "Josefin Sans", sans-serif;
@@ -20,7 +20,7 @@ body#rsvp h1, body#rsvp h2 {
 }
 body#rsvp h1 {
   font-size: 3rem;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 @media (max-width: 576px) {
   body#rsvp h1 {
@@ -33,14 +33,11 @@ body#rsvp a {
 body#rsvp .hidden {
   display: none !important;
 }
-body#rsvp section {
-  width: 100%;
-}
 body#rsvp section .logo-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 1rem auto;
 }
 body#rsvp section .logo-container img.logo {
   aspect-ratio: auto;
@@ -54,7 +51,7 @@ body#rsvp section .top h2 {
   max-width: 30rem;
 }
 body#rsvp section form {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
