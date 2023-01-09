@@ -13,6 +13,16 @@ body#faqs {
   text-align: center;
   width: 100%;
 }
+body#faqs .logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+body#faqs .logo-container img.logo {
+  aspect-ratio: auto;
+  width: 10rem;
+}
 body#faqs.simple-font h2 {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -27,6 +37,7 @@ body#faqs h1, body#faqs h2 {
 }
 body#faqs h1 {
   font-size: 3rem;
+  margin: 1rem;
 }
 @media (max-width: 576px) {
   body#faqs h1 {

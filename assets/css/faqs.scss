@@ -28,6 +28,18 @@ body#faqs {
   text-align: center;
   width: 100%;
 
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+
+    img.logo {
+      aspect-ratio: auto;
+      width: 10rem;
+    }
+  }
+
   &.simple-font {
     h2 {
       font-family: $body-font;
@@ -47,6 +59,7 @@ body#faqs {
 
   h1 {
     font-size: 3rem;
+    margin: 1rem;
     @media (max-width: $breakpoint-sm) {
       font-size: 2rem;
     }

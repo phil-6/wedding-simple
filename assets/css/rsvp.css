@@ -20,6 +20,7 @@ body#rsvp h1, body#rsvp h2 {
 }
 body#rsvp h1 {
   font-size: 3rem;
+  margin: 1rem;
 }
 @media (max-width: 576px) {
   body#rsvp h1 {
@@ -34,6 +35,16 @@ body#rsvp .hidden {
 }
 body#rsvp section {
   width: 100%;
+}
+body#rsvp section .logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+body#rsvp section .logo-container img.logo {
+  aspect-ratio: auto;
+  width: 10rem;
 }
 body#rsvp section .top h2 {
   align-items: center;
