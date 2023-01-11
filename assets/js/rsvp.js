@@ -1,16 +1,17 @@
-const passwordForm = document.getElementById("password_form");
-const rsvpFormContainer = document.getElementById("rsvp_form_container");
+const passwordForm =document.querySelector("#password_form");
+const rsvpFormContainer =document.querySelector("#rsvp_form_container");
 const rsvpForm = document.rsvpForm;
-const successMessage = document.getElementById("rsvp_success");
-const submittingMessage = document.getElementById("rsvp_sending");
+const successMessage =document.querySelector("#rsvp_success");
+const submittingMessage =document.querySelector("#rsvp_sending");
 
-const nameField = document.getElementById("name");
-const attendingSelect = document.getElementById("attending");
-const attendingYes = document.getElementById("attending_yes");
-const attendingNo = document.getElementById("attending_no");
-const partySizeInput = document.getElementById("party_size");
-const partyDetailsSection = document.getElementById("party_details");
-const personInputTemplate = document.getElementById("person_input_template");
+const nameField =document.querySelector("#name");
+const attendingSelect =document.querySelector("#attending");
+const attendingYes =document.querySelector("#attending_yes");
+const attendingNo =document.querySelector("#attending_no");
+const partySizeInput = document.querySelector("#party_size");
+const partyDetailsSection =document.querySelector("#party_details");
+const personInputTemplate =document.querySelector("#person_input_template");
+const campingInput = document.querySelector("#camping");
 
 nameField.addEventListener("change", setFirstPersonName);
 passwordForm.addEventListener("submit", enterPassword);
@@ -19,7 +20,7 @@ attendingSelect.addEventListener("change", attendingChange);
 partySizeInput.addEventListener("change", partySizeChange);
 
 function checkPassword() {
-    let submittedPassword = document.getElementById("password");
+    let submittedPassword =document.querySelector("#password");
     // If you're reading this, I know this isn't a secure way to do a password check. Shut Up.
     // It's mostly for show and to prevent bots anyway!
     const password = "password";
@@ -45,15 +46,15 @@ function attendingChange() {
     if (attendingSelect.value === "yes") {
         attendingYes.classList.remove("hidden");
         attendingNo.classList.add("hidden");
-        document.querySelector("#party_size").setAttribute("required", "required");
-        document.querySelector("#camping").setAttribute("required", "required");
+        partySizeInput.setAttribute("required", "required");
+        campingInput.setAttribute("required", "required");
         createPersonInputs();
         setFirstPersonName();
     } else {
         attendingNo.classList.remove("hidden");
         attendingYes.classList.add("hidden");
-        document.querySelector("#party_size").removeAttribute("required");
-        document.querySelector("#camping").removeAttribute("required");
+        partySizeInput.removeAttribute("required");
+        campingInput.removeAttribute("required");
         removePersonInputs();
     }
 }
