@@ -32,15 +32,39 @@ body#faqs {
     text-decoration: none;
   }
 
-  .logo-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 1rem auto;
+  .top {
+    .top-links {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      margin: auto;
+      max-width: 30rem;
+      h2 {
+        display: inline-block;
+        margin: 0;
+      }
+    }
 
-    img.logo {
-      aspect-ratio: auto;
-      width: 10rem;
+    .logo-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem auto;
+
+      img.logo {
+        aspect-ratio: auto;
+        width: 10rem;
+      }
+    }
+
+    .title {
+      margin: 1rem auto;
+      text-align: center;
+
+      * {
+        margin: 0;
+        display: inline-block;
+      }
     }
   }
 

@@ -20,7 +20,7 @@ body#rsvp h1, body#rsvp h2 {
 }
 body#rsvp h1 {
   font-size: 3rem;
-  margin: 1rem auto;
+  display: inline-block;
 }
 @media (max-width: 576px) {
   body#rsvp h1 {
@@ -33,22 +33,33 @@ body#rsvp a {
 body#rsvp .hidden {
   display: none !important;
 }
-body#rsvp section .logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 1rem auto;
-}
-body#rsvp section .logo-container img.logo {
-  aspect-ratio: auto;
-  width: 10rem;
-}
-body#rsvp section .top h2 {
+body#rsvp section .top .top-links {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
   margin: auto;
   max-width: 30rem;
+}
+body#rsvp section .top .top-links h2 {
+  display: inline-block;
+  margin: 0;
+}
+body#rsvp section .top .logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+body#rsvp section .top .logo-container img.logo {
+  aspect-ratio: auto;
+  width: 10rem;
+}
+body#rsvp section .top .title {
+  margin: 1rem auto;
+  text-align: center;
+}
+body#rsvp section .top .title * {
+  margin: 0;
 }
 body#rsvp section form {
   width: 100%;

@@ -38,7 +38,7 @@ body#rsvp {
 
   h1 {
     font-size: 3rem;
-    margin: 1rem auto;
+    display: inline-block;
     @media (max-width: $breakpoint-sm) {
       font-size: 2rem;
     }
@@ -53,24 +53,40 @@ body#rsvp {
   }
 
   section {
-    .logo-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 1rem auto;
-
-      img.logo {
-        aspect-ratio: auto;
-        width: 10rem;
+    .top {
+      .top-links {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        max-width: 30rem;
+        h2 {
+          display: inline-block;
+          margin: 0;
+        }
       }
-    }
 
-    .top h2 {
-      align-items: center;
-      display: flex;
-      justify-content: space-evenly;
-      margin: auto;
-      max-width: 30rem;
+      .logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+
+        img.logo {
+          aspect-ratio: auto;
+          width: 10rem;
+        }
+      }
+
+      .title {
+        margin: 1rem auto;
+        text-align: center;
+
+        * {
+          margin: 0;
+        }
+      }
+
     }
 
     form {

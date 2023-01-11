@@ -16,15 +16,34 @@ body#faqs {
 body#faqs a {
   text-decoration: none;
 }
-body#faqs .logo-container {
+body#faqs .top .top-links {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 30rem;
+}
+body#faqs .top .top-links h2 {
+  display: inline-block;
+  margin: 0;
+}
+body#faqs .top .logo-container {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem auto;
 }
-body#faqs .logo-container img.logo {
+body#faqs .top .logo-container img.logo {
   aspect-ratio: auto;
   width: 10rem;
+}
+body#faqs .top .title {
+  margin: 1rem auto;
+  text-align: center;
+}
+body#faqs .top .title * {
+  margin: 0;
+  display: inline-block;
 }
 body#faqs.simple-font h2 {
   font-family: "Josefin Sans", sans-serif;
