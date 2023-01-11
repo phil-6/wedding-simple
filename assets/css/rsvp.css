@@ -67,7 +67,10 @@ body#rsvp section form {
   flex-direction: column;
   align-items: center;
 }
-body#rsvp section input, body#rsvp section select, body#rsvp section textarea {
+body#rsvp section form label {
+  text-align: center;
+}
+body#rsvp section form input, body#rsvp section form select, body#rsvp section form textarea {
   background-color: rgba(21, 102, 224, 0.1254901961);
   border: 0;
   border-radius: 0.5rem;
@@ -79,30 +82,30 @@ body#rsvp section input, body#rsvp section select, body#rsvp section textarea {
   width: 30rem;
 }
 @media (max-width: 576px) {
-  body#rsvp section input, body#rsvp section select, body#rsvp section textarea {
+  body#rsvp section form input, body#rsvp section form select, body#rsvp section form textarea {
     width: 90%;
   }
 }
-body#rsvp section input {
+body#rsvp section form input {
   max-width: 100%;
 }
-body#rsvp section input:focus-visible {
+body#rsvp section form input:focus-visible {
   box-shadow: 0 0 20px -5px #f5ff43;
   outline: none;
   transition: all 0.5s;
 }
-body#rsvp section input.submit {
+body#rsvp section form input.submit {
   cursor: pointer;
   padding: 0 1rem;
   width: auto;
 }
 @media (max-width: 576px) {
-  body#rsvp section input.submit {
+  body#rsvp section form input.submit {
     box-shadow: -20px 0 30px #f5ff43, 0 0 30px #50e176, 20px 0 30px #1FCAD6;
     transition: all 0.5s;
   }
 }
-body#rsvp section input.submit:hover {
+body#rsvp section form input.submit:hover {
   box-shadow: -20px 0 30px #f5ff43, 0 0 30px #50e176, 20px 0 30px #1FCAD6;
   transition: all 0.5s;
 }

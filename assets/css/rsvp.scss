@@ -60,6 +60,7 @@ body#rsvp {
         justify-content: space-evenly;
         margin: auto;
         max-width: 30rem;
+
         h2 {
           display: inline-block;
           margin: 0;
@@ -94,49 +95,53 @@ body#rsvp {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
 
-    input, select, textarea {
-      background-color: $form-transparent;
-      border: 0;
-      border-radius: 0.5rem;
-      color: $blue;
-      font-size: $form-font-size;
-      font-family: $body-font;
-      padding: 0.2rem;
-      text-align: center;
-      width: 30rem;
-      @media (max-width: $breakpoint-sm) {
-        width: 90%;
-      }
-    }
-
-    input {
-      max-width: 100%;
-
-      &:focus-visible {
-        box-shadow: 0 0 20px -5px $yellow;
-        outline: none;
-        transition: all 0.5s;
+      label {
+        text-align: center;
       }
 
-      &.submit {
-        cursor: pointer;
-        padding: 0 1rem;
-        width: auto;
-
+      input, select, textarea {
+        background-color: $form-transparent;
+        border: 0;
+        border-radius: 0.5rem;
+        color: $blue;
+        font-size: $form-font-size;
+        font-family: $body-font;
+        padding: 0.2rem;
+        text-align: center;
+        width: 30rem;
         @media (max-width: $breakpoint-sm) {
-          box-shadow: -20px 0 30px $yellow,
-          0 0 30px $green,
-          20px 0 30px $blue;
+          width: 90%;
+        }
+      }
+
+      input {
+        max-width: 100%;
+
+        &:focus-visible {
+          box-shadow: 0 0 20px -5px $yellow;
+          outline: none;
           transition: all 0.5s;
         }
 
-        &:hover {
-          box-shadow: -20px 0 30px $yellow,
-          0 0 30px $green,
-          20px 0 30px $blue;
-          transition: all 0.5s;
+        &.submit {
+          cursor: pointer;
+          padding: 0 1rem;
+          width: auto;
+
+          @media (max-width: $breakpoint-sm) {
+            box-shadow: -20px 0 30px $yellow,
+            0 0 30px $green,
+            20px 0 30px $blue;
+            transition: all 0.5s;
+          }
+
+          &:hover {
+            box-shadow: -20px 0 30px $yellow,
+            0 0 30px $green,
+            20px 0 30px $blue;
+            transition: all 0.5s;
+          }
         }
       }
     }
