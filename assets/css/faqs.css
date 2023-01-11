@@ -67,7 +67,7 @@ body#faqs h1 {
   }
 }
 body#faqs section {
-  margin: 1rem auto;
+  margin: 1rem auto 5rem;
 }
 body#faqs section .question {
   max-width: 40rem;

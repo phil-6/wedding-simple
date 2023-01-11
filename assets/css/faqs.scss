@@ -39,6 +39,7 @@ body#faqs {
       justify-content: space-evenly;
       margin: auto;
       max-width: 30rem;
+
       h2 {
         display: inline-block;
         margin: 0;
@@ -94,7 +95,7 @@ body#faqs {
   }
 
   section {
-    margin: 1rem auto;
+    margin: 1rem auto 5rem;
 
     .question {
       max-width: 40rem;
