@@ -108,6 +108,13 @@ body#faqs {
         h2 {
           width: 100%;
         }
+        a {
+          color: $blue;
+
+          &:hover {
+            color: $green;
+          }
+        }
       }
     }
   }

@@ -81,6 +81,12 @@ body#faqs section .question {
   body#faqs section .question h2 {
     width: 100%;
   }
+  body#faqs section .question a {
+    color: #1FCAD6;
+  }
+  body#faqs section .question a:hover {
+    color: #50e176;
+  }
 }
 
 /*# sourceMappingURL=faqs.css.map */
