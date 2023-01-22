@@ -73,6 +73,12 @@ body#faqs section .question {
   max-width: 40rem;
   margin: auto;
 }
+body#faqs section .question a {
+  color: #1FCAD6;
+}
+body#faqs section .question a:hover {
+  color: #50e176;
+}
 @media (max-width: 576px) {
   body#faqs section .question p {
     width: 90%;
@@ -80,12 +86,6 @@ body#faqs section .question {
   }
   body#faqs section .question h2 {
     width: 100%;
-  }
-  body#faqs section .question a {
-    color: #1FCAD6;
-  }
-  body#faqs section .question a:hover {
-    color: #50e176;
   }
 }
 

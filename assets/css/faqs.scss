@@ -100,6 +100,13 @@ body#faqs {
     .question {
       max-width: 40rem;
       margin: auto;
+      a {
+        color: $blue;
+
+        &:hover {
+          color: $green;
+        }
+      }
       @media (max-width: $breakpoint-sm) {
         p {
           width: 90%;
@@ -107,13 +114,6 @@ body#faqs {
         }
         h2 {
           width: 100%;
-        }
-        a {
-          color: $blue;
-
-          &:hover {
-            color: $green;
-          }
         }
       }
     }
