@@ -23,8 +23,8 @@ function checkPassword() {
     let submittedPassword =document.querySelector("#password");
     // If you're reading this, I know this isn't a secure way to do a password check. Shut Up.
     // It's mostly for show and to prevent bots anyway!
-    const password = "password";
-    if (password !== submittedPassword.value) {
+    const password = "bearthecat";
+    if (password !== submittedPassword.value.toLowerCase().trim()) {
         alert("Password is incorrect, please check your invite!");
         submittedPassword.value = "";
         return false;
