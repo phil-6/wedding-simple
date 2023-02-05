@@ -94,8 +94,11 @@ body#faqs {
     }
   }
 
-  section {
+  section.questions {
     margin: 1rem auto 5rem;
+    &:last-child {
+      margin-bottom: 5rem;
+    }
 
     .question {
       max-width: 40rem;

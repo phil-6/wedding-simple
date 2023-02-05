@@ -66,25 +66,28 @@ body#faqs h1 {
     font-size: 2rem;
   }
 }
-body#faqs section {
+body#faqs section.questions {
   margin: 1rem auto 5rem;
 }
-body#faqs section .question {
+body#faqs section.questions:last-child {
+  margin-bottom: 5rem;
+}
+body#faqs section.questions .question {
   max-width: 40rem;
   margin: auto;
 }
-body#faqs section .question a {
+body#faqs section.questions .question a {
   color: #1FCAD6;
 }
-body#faqs section .question a:hover {
+body#faqs section.questions .question a:hover {
   color: #50e176;
 }
 @media (max-width: 576px) {
-  body#faqs section .question p {
+  body#faqs section.questions .question p {
     width: 90%;
     margin: auto;
   }
-  body#faqs section .question h2 {
+  body#faqs section.questions .question h2 {
     width: 100%;
   }
 }
