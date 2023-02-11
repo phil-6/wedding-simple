@@ -61,6 +61,11 @@ body#rsvp section .top .title {
 body#rsvp section .top .title * {
   margin: 0;
 }
+body#rsvp section .middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 body#rsvp section form {
   width: 100%;
   display: flex;
