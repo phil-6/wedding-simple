@@ -46,10 +46,10 @@ function initializeClock(endtime) {
             countdown_all.classList.remove('hidden')
         }
 
-        if (t.hours >= 2 && t.minutes <= 55) {
-            countdown_days.classList.remove('hidden')
-            countdown_all.classList.add('hidden')
-        }
+        // if (t.hours >= 2 && t.minutes <= 55) {
+        //     countdown_days.classList.remove('hidden')
+        //     countdown_all.classList.add('hidden')
+        // }
     }
 
     updateClock();
